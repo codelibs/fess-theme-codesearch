@@ -164,7 +164,7 @@
 				</div>
 				<div class="body">
 					<div class="description col-md-12">
-						<pre class="prettyprint"><code>${doc.content_description}</code></pre>
+						${fe:formatCode("L", "prettyprint", doc.mimetype, doc.content_description)}
 					</div>
 				</div>
 			</li>

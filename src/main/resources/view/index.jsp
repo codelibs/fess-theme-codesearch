@@ -13,7 +13,7 @@
 </c:if>
 <link href="${fe:url('/css/bootstrap.min.css')}" rel="stylesheet"
 	type="text/css" />
-<link href="${fe:url('/css/style.css')}" rel="stylesheet" type="text/css" />
+<link href="${fe:url('/css/codesearch/style.css')}" rel="stylesheet" type="text/css" />
 <link href="${fe:url('/css/font-awesome.min.css')}" rel="stylesheet"
 	type="text/css" />
 </head>
