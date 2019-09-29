@@ -127,9 +127,29 @@ legend{
 	align-items: flex-start;
 }
 
+#result .body li.L0,
+#result .body li.L1,
+#result .body li.L2,
+#result .body li.L3,
+#result .body li.L5,
+#result .body li.L6,
+#result .body li.L7,
+#result .body li.L8 {
+	list-style-type: decimal;
+}
+
+#result .body pre {
+	margin-bottom: 0;
+}
+
 #result .site cite {
-	color: #093;
+	font-size: 0.9em;
+	color: #333;
 	font-style: normal;
+}
+
+#result .info {
+	padding-left: 15px;
 }
 
 #result .more {
