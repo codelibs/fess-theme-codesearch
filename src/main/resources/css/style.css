@@ -138,14 +138,27 @@ legend{
 	list-style-type: decimal;
 }
 
+#result .body li.L1,
+#result .body li.L3,
+#result .body li.L5,
+#result .body li.L7,
+#result .body li.L9 {
+	background-color: #f9f9f9;
+}
+
 #result .body pre {
 	margin-bottom: 0;
 }
 
-#result .site cite {
+#result .body pre strong {
+	background-color: #ffffbb;
+}
+
+#result .repository cite {
 	font-size: 0.9em;
-	color: #333;
+	color: #666!important;
 	font-style: normal;
+	font-weight: 600!important;
 }
 
 #result .info {

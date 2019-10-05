@@ -98,7 +98,7 @@
 			<div class="row">
 				<div class="col text-center searchFormBox">
 					<h1 class="mainLogo">
-						<img src="${fe:url('/images/logo.png')}"
+						<img src="${fe:url('/images/codesearch/logo.png')}"
 							alt="<la:message key="labels.index_title" />" />
 					</h1>
 					<div class="notification">${notification}</div>

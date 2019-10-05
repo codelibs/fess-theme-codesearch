@@ -90,8 +90,14 @@
 	<ol class="list-unstyled col-md-9">
 		<c:forEach var="doc" varStatus="s" items="${documentItems}">
 			<li id="result${s.index}">
+				<div class="repository text-truncate">
+					<a href="${f:u(doc.repository_url)}"><cite>${f:h(doc.domain)}/${f:h(doc.organization)}/${f:h(doc.repository)}</cite></a>
+				</div>
+				<h3 class="title text-truncate">
+					<a class="link" href="${doc.url_link}" data-uri="${doc.url_link}"
+						data-id="${doc.doc_id}" data-order="${s.index}">${doc.path}</a>
+				</h3>
 				<div class="site text-truncate">
-					<cite>${f:h(doc.domain)}/${f:h(doc.organization)}/${f:h(doc.repository)}</cite>
 					<c:if test="${doc.has_cache=='true'}">
 						<small class="d-none d-lg-inline-block"> <la:link
 								href="/cache/?docId=${doc.doc_id}${appendHighlightParams}"
@@ -109,10 +115,6 @@
 						</small>
 					</c:if>
 				</div>
-				<h3 class="title text-truncate">
-					<a class="link" href="${doc.url_link}" data-uri="${doc.url_link}"
-						data-id="${doc.doc_id}" data-order="${s.index}">${doc.path}</a>
-				</h3>
 				<div class="body">
 					<div class="description col-md-12">
 						${fe:formatCode("L", "prettyprint", doc.mimetype, doc.content_description)}
