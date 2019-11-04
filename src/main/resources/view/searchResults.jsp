@@ -95,9 +95,9 @@
 	<ol class="list-unstyled col-md-9">
 <%@ include file="adsenseResultTop.jsp" %>
 		<c:forEach var="doc" varStatus="s" items="${documentItems}">
-			<li id="result${s.index}">
+			<li id="result${s.index}" class="result-box">
 				<div class="repository text-truncate">
-					<a href="${f:u(doc.repository_url)}"><cite>${f:h(doc.domain)}/${f:h(doc.organization)}/${f:h(doc.repository)}</cite></a>
+					<a href="${doc.repository_url}"><cite>${f:h(doc.domain)}/${f:h(doc.organization)}/${f:h(doc.repository)}</cite></a>
 				</div>
 				<h3 class="title text-truncate">
 					<a class="link" href="${doc.url_link}" data-uri="${doc.url_link}"
@@ -123,7 +123,8 @@
 				</div>
 				<div class="body">
 					<div class="description col-md-12">
-						${fe:formatCode("L", "prettyprint", doc.mimetype, doc.content_description)}
+						${fe:formatCode("L", "prettyprint", doc.mimetype,
+						  doc.content_description.replaceAll("([\\s\\.;])(\\w[\\w$]+)(\\s*[\\(\\[&])", '$1<a href="/search/?q=$2">$2</a>$3'))}
 					</div>
 				</div>
 				<div class="info">

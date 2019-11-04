@@ -3,7 +3,7 @@
 	role="search">
 	${fe:facetForm()}${fe:geoForm()}
 	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navy">
 			<div id="content" class="container">
 				<la:link styleClass="navbar-brand d-inline-flex" href="/">
 					<img src="${fe:url('/images/codesearch/logo-head.png')}"
@@ -67,6 +67,9 @@
 								</la:link></li>
 						</c:when>
 					</c:choose>
+					<li class="nav-item"><a href="https://github.com/codelibs/docker-codesearch" class="nav-link" target="_blank">
+							<em class="fab fa-github"></em>
+						</a></li>
 					<li class="nav-item"><la:link href="/help" styleClass="nav-link" role="help" aria-haspopup="true"
 							aria-expanded="false">
 							<em class="fa fa-fw fa-question-circle"></em>

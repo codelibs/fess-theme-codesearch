@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><la:message key="labels.search_title" /></title>
+<title>Code Search</title>
 <%@ include file="gtmHead.jsp" %>
 <c:if test="${osddLink}">
 	<link rel="search" type="application/opensearchdescription+xml"
@@ -26,7 +26,7 @@
 	<la:form action="/search" method="get" styleId="searchForm">
 		${fe:facetForm()}${fe:geoForm()}
 		<header>
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navy">
 				<div id="content" class="container">
 					<div class="navbar-brand"></div>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
@@ -71,6 +71,10 @@
 										</la:link></li>
 								</c:when>
 							</c:choose>
+							<li class="nav-item"><a href="https://github.com/codelibs/docker-codesearch"
+									class="nav-link help-link" target="_blank">
+									<em class="fab fa-github"></em>
+								</a></li>
 							<li class="nav-item"><la:link href="/help"
 									styleClass="nav-link help-link">
 									<em class="fa fa-fw fa-question-circle"></em>
@@ -159,6 +163,24 @@
 			</div>
 			<c:if test="${facetResponse != null}">
 				<div class="row">
+				<c:forEach var="fieldData" items="${facetResponse.fieldList}">
+					<c:if test="${fieldData.valueCountMap.size() > 0}">
+					<div class="col-md-4">
+					<ul class="list-group mb-2">
+						<li class="list-group-item text-uppercase">${f:h(fieldData.name)}</li>
+						<c:forEach var="countEntry" items="${fieldData.valueCountMap}">
+							<c:if test="${countEntry.value != 0}">
+							<li class="list-group-item">
+								<la:link href="/search?q=${f:u(fieldData.name)}%3a${f:u(countEntry.key)}${fe:pagingQuery(null)}${fe:facetQuery()}${fe:geoQuery()}">
+								${f:h(countEntry.key)}
+								<span class="badge badge-secondary badge-pill float-right">${f:h(countEntry.value)}</span>
+								</la:link></li>
+							</c:if>
+						</c:forEach>
+					</ul>
+					</div>
+					</c:if>
+				</c:forEach>
 				<c:forEach var="facetQueryView" items="${fe:facetQueryViewList()}">
 					<div class="col-md-4">
 					<ul class="list-group mb-2">
@@ -168,7 +190,7 @@
 						<c:forEach var="queryEntry" items="${facetQueryView.queryMap}">
 							<c:if test="${facetResponse.queryCountMap[queryEntry.value] > 0}">
 								<li class="list-group-item"><la:link
-										href="/search?q=${f:u(queryEntry.value)}&sdh=${f:u(fe:sdh(sdh))}${fe:pagingQuery(queryEntry.value)}${fe:facetQuery()}${fe:geoQuery()}">
+										href="/search?q=${f:u(queryEntry.value)}${fe:pagingQuery(queryEntry.value)}${fe:facetQuery()}${fe:geoQuery()}">
 										<c:if test="${fn:startsWith(queryEntry.key, 'labels.')}"><la:message key="${queryEntry.key}" /></c:if>
 										<c:if test="${not fn:startsWith(queryEntry.key, 'labels.')}">${f:h(queryEntry.key)}</c:if>
 										<span class="badge badge-secondary badge-pill float-right">${f:h(facetResponse.queryCountMap[queryEntry.value])}</span>

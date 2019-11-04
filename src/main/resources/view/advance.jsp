@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><la:message key="labels.search_title" /></title>
+<title>Code Search | Advance Search</title>
 <%@ include file="gtmHead.jsp" %>
 <c:if test="${osddLink}">
 	<link rel="search" type="application/opensearchdescription+xml" href="${fe:url('/osdd')}"
@@ -21,7 +21,7 @@
 	<la:form styleClass="form-stacked" action="/search/" method="get" styleId="searchForm">
 		${fe:facetForm()}${fe:geoForm()}
 		<header>
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navy">
 				<div class="container">
 					<la:link styleClass="navbar-brand d-inline-flex" href="/">
 						<img src="${fe:url('/images/codesearch/logo-head.png')}"
@@ -70,6 +70,9 @@
 										</la:link></li>
 								</c:when>
 							</c:choose>
+							<li class="nav-item"><a href="https://github.com/codelibs/docker-codesearch" class="nav-link help-link" target="_blank">
+									<em class="fab fa-github"></em>
+								</a></li>
 							<li class="nav-item"><la:link href="/help" styleClass="nav-link help-link">
 									<em class="fa fa-fw fa-question-circle"></em>
 									<la:message key="labels.index_help" />

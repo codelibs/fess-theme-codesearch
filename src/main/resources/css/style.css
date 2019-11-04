@@ -102,8 +102,10 @@ legend{
 	border-radius: 0px;
 }
 
-#result ol li {
-	margin: 1em 0;
+#result ol li.result-box {
+	margin: 0;
+	padding: 10px 0;
+	border-bottom: solid 1px #ccc;
 }
 
 #result ol li:first-child {
@@ -182,6 +184,10 @@ legend{
 
 .ad_result_top {
 	height: 100px;
+}
+
+.bg-navy {
+	background-color: #091E43;
 }
 
 /* Extra small devices (less than 576px) */
