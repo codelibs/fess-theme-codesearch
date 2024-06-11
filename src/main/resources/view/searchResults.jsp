@@ -104,6 +104,7 @@
 						data-id="${doc.doc_id}" data-order="${s.index}">${doc.path}</a>
 				</h3>
 				<div class="site text-truncate">
+					<c:if test="${clipboardCopyIcon}"><i class="far fa-copy url-copy" data-clipboard-text="${doc.url_link}"></i></c:if>
 					<c:if test="${doc.has_cache=='true'}">
 						<small class="d-none d-lg-inline-block"> <la:link
 								href="/cache/?docId=${doc.doc_id}${appendHighlightParams}"
