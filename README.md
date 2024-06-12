@@ -1,25 +1,33 @@
-Fess Theme: Code Search
-=========
+# Fess Theme: Code Search
 
-This project is `Code Search` view template for Fess Theme.
-See [codesearch.codelibs.org](https://codesearch.codelibs.org/).
+This project provides the `Code Search` view template for the Fess Theme. For more details, visit [codesearch.codelibs.org](https://codesearch.codelibs.org/).
 
 ## Getting Started
 
-### Install
+### Installation
 
-You can install Fess Theme at [Plugin](https://fess.codelibs.org/13.4/admin/plugin-guide.html) page.
+To install the Fess Theme, please refer to the [Plugin Guide](https://fess.codelibs.org/14.14/admin/plugin-guide.html).
 
 ### Configuration
 
-To use an installed theme, for exmaples, set `Host:localhost:8080=codesearch` to [VirtualHost](https://fess.codelibs.org/13.4/admin/general-guide.html#virtual-hosts) of General Configuration, and then add `codesearch` to [VirtualHost](https://fess.codelibs.org/13.4/admin/webconfig-guide.html#virtual-hosts) of Crawling Configuration.
+To configure and use the installed theme, follow these steps:
 
-## Others
+1. Set the `Host` parameter in the General Configuration's [Virtual Host](https://fess.codelibs.org/14.14/admin/general-guide.html#virtual-hosts) section:
+
+```
+Host:localhost:8080=codesearch
+```
+
+2. Add `codesearch` to the [Virtual Host](https://fess.codelibs.org/14.14/admin/webconfig-guide.html#virtual-hosts) section of the Crawling Configuration.
+
+## Additional Information
 
 ### File Structure
 
-- src/main/resources/view: JSP files
-- src/main/resources/images: Images files
-- src/main/resources/css: CSS files
-- src/main/resources/js: JavaScript files 
+- **src/main/resources/view**: Contains JSP files.
+- **src/main/resources/images**: Contains image files.
+- **src/main/resources/css**: Contains CSS files.
+- **src/main/resources/js**: Contains JavaScript files.
+
+For further details and support, visit the [Fess Documentation](https://fess.codelibs.org/).
 
