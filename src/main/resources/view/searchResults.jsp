@@ -100,11 +100,11 @@
 					<a href="${doc.repository_url}"><cite>${f:h(doc.domain)}/${f:h(doc.organization)}/${f:h(doc.repository)}</cite></a>
 				</div>
 				<h3 class="title text-truncate">
+					<c:if test="${clipboardCopyIcon}"><i class="far fa-copy url-copy" data-clipboard-text="${doc.url_link}"></i></c:if>
 					<a class="link" href="${doc.url_link}" data-uri="${doc.url_link}"
 						data-id="${doc.doc_id}" data-order="${s.index}">${doc.path}</a>
 				</h3>
 				<div class="site text-truncate">
-					<c:if test="${clipboardCopyIcon}"><i class="far fa-copy url-copy" data-clipboard-text="${doc.url_link}"></i></c:if>
 					<c:if test="${doc.has_cache=='true'}">
 						<small class="d-none d-lg-inline-block"> <la:link
 								href="/cache/?docId=${doc.doc_id}${appendHighlightParams}"
