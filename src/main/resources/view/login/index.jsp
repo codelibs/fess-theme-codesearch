@@ -38,9 +38,9 @@
 				<la:errors />
 			</div>
 			<la:form styleId="login" method="post">
-				<div class="form-group has-feedback">
+				<div class="mb-3">
 					<div class="input-group">
-						<span class="input-group-addon"><em class="fa fa-user fa-fw"></em></span>
+						<span class="input-group-text"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
 						<c:set var="ph_username">
 							<la:message key="labels.login.placeholder_username" />
 						</c:set>
@@ -48,9 +48,9 @@
 							class="form-control" placeholder="${ph_username}" />
 					</div>
 				</div>
-				<div class="form-group has-feedback">
+				<div class="mb-3">
 					<div class="input-group">
-						<span class="input-group-addon"><em class="fa fa-lock fa-fw"></em></span>
+						<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 						<c:set var="ph_password">
 							<la:message key="labels.login.placeholder_password" />
 						</c:set>
@@ -62,7 +62,7 @@
 					<button type="submit" name="login"
 						class="btn btn-primary btn-block btn-flat"
 						value="<la:message key="labels.login"/>">
-						<em class="fa fa-sign-in"></em>
+						<i class="fa fa-sign-in" aria-hidden="true"></i>
 						<la:message key="labels.login" />
 					</button>
 				</div>

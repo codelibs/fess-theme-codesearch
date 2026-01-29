@@ -28,20 +28,20 @@
 							alt="<la:message key="labels.header_brand_name" />"
 							class="align-items-center" />
 					</la:link>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbar">
-						<div class="mr-auto"></div>
+						<div class="me-auto"></div>
 						<ul class="nav navbar-nav">
 							<c:choose>
 								<c:when test="${!empty username && username != 'guest'}">
 									<li class="nav-item">
 										<div class="dropdown">
-											<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+											<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 												aria-expanded="false"
-											> <em class="fa fa-fw fa-user"></em>${username}
+											> <i class="fa fa-fw fa-user" aria-hidden="true"></i>${username}
 											</a>
 											<div class="dropdown-menu" aria-labelledby="userMenu">
 												<c:if test="${editableUser == true}">
@@ -65,16 +65,16 @@
 									<li class="nav-item"><la:link href="/login" styleClass="nav-link" role="button" aria-haspopup="true"
 											aria-expanded="false"
 										>
-											<em class="fa fa-fw fa-sign-in"></em>
+											<i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>
 											<la:message key="labels.login" />
 										</la:link></li>
 								</c:when>
 							</c:choose>
 							<li class="nav-item"><a href="https://github.com/codelibs/docker-codesearch" class="nav-link help-link" target="_blank">
-									<em class="fab fa-github"></em>
+									<i class="fab fa-github" aria-hidden="true"></i>
 								</a></li>
 							<li class="nav-item"><la:link href="/help" styleClass="nav-link help-link">
-									<em class="fa fa-fw fa-question-circle"></em>
+									<i class="fa fa-fw fa-question-circle" aria-hidden="true"></i>
 									<la:message key="labels.index_help" />
 								</la:link></li>
 						</ul>
@@ -96,7 +96,7 @@
 					suffix="errors.front_suffix"
 				/>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_q" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_must_queries"
 					/></label>
@@ -107,7 +107,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_epq" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_phrase_query"
 					/></label>
@@ -118,7 +118,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_oq" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_should_queries"
 					/></label>
@@ -129,7 +129,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_nq" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_not_queries"
 					/></label>
@@ -140,7 +140,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="contentNum" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.index_num"
 					/></label>
@@ -161,7 +161,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="contentSort" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.index_sort"
 					/></label>
@@ -219,7 +219,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="contentLang" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.index_lang"
 					/></label>
@@ -235,7 +235,7 @@
 				</div>
 			</div>
 			<c:if test="${displayLabelTypeItems}">
-				<div class="form-group row">
+				<div class="mb-3 row">
 					<label for="contentLabelType" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 							key="labels.index_label"
 						/></label>
@@ -251,7 +251,7 @@
 					</div>
 				</div>
 			</c:if>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_timestamp" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_timestamp"
 					/></label>
@@ -276,7 +276,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_filetype" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_filetype"
 					/></label>
@@ -304,7 +304,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_occt" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_occt"
 					/></label>
@@ -323,7 +323,7 @@
 					<!-- TODO -->
 				</div>
 			</div>
-			<div class="form-group row">
+			<div class="mb-3 row">
 				<label for="as_sitesearch" class="col-lg-3 col-md-4 col-sm-5 col-12 col-form-label"><la:message
 						key="labels.advance_search_sitesearch"
 					/></label>
@@ -337,7 +337,7 @@
 
 			<div class="row">
 				<button type="submit" name="search" id="searchButton" class="btn btn-primary mx-auto">
-					<em class="fa fa-search"></em>
+					<i class="fa fa-search" aria-hidden="true"></i>
 					<la:message key="labels.index_form_search_btn" />
 				</button>
 			</div>

@@ -29,20 +29,20 @@
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navy">
 				<div id="content" class="container">
 					<div class="navbar-brand"></div>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
 							aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbar">
-						<div class="mr-auto"></div>
+						<div class="me-auto"></div>
 						<ul class="nav navbar-nav">
 							<c:choose>
 								<c:when test="${!empty username && username != 'guest'}">
 									<li class="nav-item">
 										<div class="dropdown">
-											<a class="nav-link dropdown-toggle" data-toggle="dropdown"
+											<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
 												href="#" role="button" aria-haspopup="true"
-												aria-expanded="false"> <em class="fa fa-fw fa-user"></em>${username}
+												aria-expanded="false"> <i class="fa fa-fw fa-user" aria-hidden="true"></i>${username}
 											</a>
 											<div class="dropdown-menu" aria-labelledby="userMenu">
 												<c:if test="${editableUser == true}">
@@ -66,18 +66,18 @@
 									<li class="nav-item"><la:link href="/login"
 											styleClass="nav-link" role="button" aria-haspopup="true"
 											aria-expanded="false">
-											<em class="fa fa-fw fa-sign-in"></em>
+											<i class="fa fa-fw fa-sign-in" aria-hidden="true"></i>
 											<la:message key="labels.login" />
 										</la:link></li>
 								</c:when>
 							</c:choose>
 							<li class="nav-item"><a href="https://github.com/codelibs/docker-codesearch"
 									class="nav-link help-link" target="_blank">
-									<em class="fab fa-github"></em>
+									<i class="fab fa-github" aria-hidden="true"></i>
 								</a></li>
 							<li class="nav-item"><la:link href="/help"
 									styleClass="nav-link help-link">
-									<em class="fa fa-fw fa-question-circle"></em>
+									<i class="fa fa-fw fa-question-circle" aria-hidden="true"></i>
 									<la:message key="labels.index_help" />
 								</la:link></li>
 						</ul>
@@ -93,11 +93,11 @@
 						<la:message key="labels.search_options_clear" />
 					</button>
 					<button type="submit" class="btn btn-primary">
-						<em class="fa fa-search"></em>
+						<i class="fa fa-search" aria-hidden="true"></i>
 						<la:message key="labels.search" />
 					</button>
 					<la:link href="/search/advance" styleClass="btn btn-info">
-						<em class="fa fa-cog"></em>
+						<i class="fa fa-cog" aria-hidden="true"></i>
 						<la:message key="labels.advance" />
 					</la:link>
 				</div>
@@ -148,13 +148,13 @@
 						<div class="clearfix searchButtonBox btn-group">
 							<button type="submit" name="search" id="searchButton"
 								class="btn btn-primary">
-								<em class="fa fa-search"></em>
+								<i class="fa fa-search" aria-hidden="true"></i>
 								<la:message key="labels.index_form_search_btn" />
 							</button>
 							<button type="button" class="btn btn-outline-secondary"
-								data-toggle="control-options" data-target="#searchOptions"
+								data-bs-toggle="collapse" data-bs-target="#searchOptions"
 								id="searchOptionsButton">
-								<em class="fa fa-cog"></em>
+								<i class="fa fa-cog" aria-hidden="true"></i>
 								<la:message key="labels.index_form_option_btn" />
 							</button>
 						</div>
@@ -173,7 +173,7 @@
 							<li class="list-group-item">
 								<la:link href="/search?q=${f:u(fieldData.name)}%3a${f:u(countEntry.key)}${fe:pagingQuery(null)}${fe:facetQuery()}${fe:geoQuery()}">
 								${f:h(countEntry.key)}
-								<span class="badge badge-secondary badge-pill float-right">${f:h(countEntry.value)}</span>
+								<span class="badge rounded-pill text-bg-secondary float-end">${f:h(countEntry.value)}</span>
 								</la:link></li>
 							</c:if>
 						</c:forEach>
@@ -193,7 +193,7 @@
 										href="/search?q=${f:u(queryEntry.value)}${fe:pagingQuery(queryEntry.value)}${fe:facetQuery()}${fe:geoQuery()}">
 										<c:if test="${fn:startsWith(queryEntry.key, 'labels.')}"><la:message key="${queryEntry.key}" /></c:if>
 										<c:if test="${not fn:startsWith(queryEntry.key, 'labels.')}">${f:h(queryEntry.key)}</c:if>
-										<span class="badge badge-secondary badge-pill float-right">${f:h(facetResponse.queryCountMap[queryEntry.value])}</span>
+										<span class="badge rounded-pill text-bg-secondary float-end">${f:h(facetResponse.queryCountMap[queryEntry.value])}</span>
 									</la:link></li>
 								<c:set var="facetFound" value="T"/>
 							</c:if>
@@ -205,7 +205,7 @@
 					</div>
 				</c:forEach>
 				<c:if test="${!empty ex_q}">
-					<div class="float-right">
+					<div class="float-end">
 						<la:link href="/search?q=${f:u(q)}"
 							styleClass="btn btn-link btn-sm">
 							<la:message key="labels.facet_label_reset" />
