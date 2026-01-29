@@ -24,7 +24,7 @@
 
 			</div>
 		</div>
-		<div class="text-right">
+		<div class="text-end">
 			<a href="#"><la:message key="labels.footer_back_to_top" /></a>
 		</div>
 	</main>

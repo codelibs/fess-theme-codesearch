@@ -37,9 +37,9 @@
 				<la:errors />
 			</div>
 			<la:form styleId="login" method="post">
-				<div class="form-group has-feedback">
+				<div class="mb-3">
 					<div class="input-group">
-						<span class="input-group-addon"><em class="fa fa-lock fa-fw"></em></span>
+						<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 						<c:set var="ph_old_password">
 							<la:message key="labels.profile.placeholder_old_password" />
 						</c:set>
@@ -47,9 +47,9 @@
 							placeholder="${ph_old_password}" />
 					</div>
 				</div>
-				<div class="form-group has-feedback">
+				<div class="mb-3">
 					<div class="input-group">
-						<span class="input-group-addon"><em class="fa fa-lock fa-fw"></em></span>
+						<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 						<c:set var="ph_new_password">
 							<la:message key="labels.profile.placeholder_new_password" />
 						</c:set>
@@ -57,9 +57,9 @@
 							     placeholder="${ph_new_password}" />
 					</div>
 				</div>
-				<div class="form-group has-feedback">
+				<div class="mb-3">
 					<div class="input-group">
-						<span class="input-group-addon"><em class="fa fa-lock fa-fw"></em></span>
+						<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 						<c:set var="ph_confirm_password">
 							<la:message key="labels.profile.placeholder_confirm_new_password" />
 						</c:set>
@@ -69,14 +69,14 @@
 				</div>
 				<div class="text-center">
 					<la:link href="/"
-						styleClass="btn btn-default">
-						<em class="fa fa-arrow-circle-left"></em>
+						styleClass="btn btn-secondary">
+						<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
 						<la:message key="labels.profile.back" />
 					</la:link>
 					<button type="submit" name="changePassword"
 						class="btn btn-warning"
 						value="<la:message key="labels.profile.update"/>">
-						<em class="fa fa-pencil-alt"></em>
+						<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 						<la:message key="labels.profile.update" />
 					</button>
 				</div>
