@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><la:message key="labels.system_error_title" /></title>
-<link href="${fe:url('/css/bootstrap.min.css')}" rel="stylesheet"
+<link href="${fe:url('/css/codesearch/bootstrap.min.css')}" rel="stylesheet"
 	type="text/css" />
 <link href="${fe:url('/css/codesearch/style.css')}" rel="stylesheet"
 	type="text/css" />
-<link href="${fe:url('/css/font-awesome.min.css')}"
+<link href="${fe:url('/css/codesearch/font-awesome.min.css')}"
 	rel="stylesheet" type="text/css" />
 </head>
 <body class="error">
@@ -31,9 +31,10 @@
 	<jsp:include page="../footer.jsp" />
 	<input type="hidden" id="contextPath" value="${pageContext.request.contextPath}" />
 	<script type="text/javascript"
-		src="${fe:url('/js/jquery-3.4.0.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/bootstrap.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/suggestor.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/search.js')}"></script>
+		src="${fe:url('/js/codesearch/jquery-3.7.1.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/popper.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/bootstrap.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/suggestor.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/search.js')}"></script>
 </body>
 </html>

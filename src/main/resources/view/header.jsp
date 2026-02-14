@@ -22,7 +22,7 @@
 							<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 						<button type="button" class="btn btn-light"
-							data-bs-toggle="collapse" data-bs-target="#searchOptions"
+							data-toggle="control-options" data-target="#searchOptions"
 							id="searchOptionsButton">
 							<i class="fa fa-cog" aria-hidden="true"></i> <span class="visually-hidden"><la:message
 									key="labels.header_form_option_btn" /></span>
