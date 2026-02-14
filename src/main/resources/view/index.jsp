@@ -14,10 +14,10 @@
 		href="${fe:url('/osdd')}"
 		title="<la:message key="labels.index_osdd_title" />" />
 </c:if>
-<link href="${fe:url('/css/bootstrap.min.css')}" rel="stylesheet"
+<link href="${fe:url('/css/codesearch/bootstrap.min.css')}" rel="stylesheet"
 	type="text/css" />
 <link href="${fe:url('/css/codesearch/style.css')}" rel="stylesheet" type="text/css" />
-<link href="${fe:url('/css/font-awesome.min.css')}" rel="stylesheet"
+<link href="${fe:url('/css/codesearch/font-awesome.min.css')}" rel="stylesheet"
 	type="text/css" />
 <%@ include file="adsenseHead.jsp" %>
 </head>
@@ -152,7 +152,7 @@
 								<la:message key="labels.index_form_search_btn" />
 							</button>
 							<button type="button" class="btn btn-outline-secondary"
-								data-bs-toggle="collapse" data-bs-target="#searchOptions"
+								data-toggle="control-options" data-target="#searchOptions"
 								id="searchOptionsButton">
 								<i class="fa fa-cog" aria-hidden="true"></i>
 								<la:message key="labels.index_form_option_btn" />
@@ -219,9 +219,10 @@
 	</la:form>
 	<input type="hidden" id="contextPath" value="${contextPath}" />
 	<script type="text/javascript"
-		src="${fe:url('/js/jquery-3.6.3.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/bootstrap.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/suggestor.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/index.js')}"></script>
+		src="${fe:url('/js/codesearch/jquery-3.7.1.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/popper.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/bootstrap.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/suggestor.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/index.js')}"></script>
 </body>
 </html>

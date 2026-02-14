@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><la:message key="labels.profile.title" /></title>
+<title><la:message key="labels.login.title" /></title>
 <link href="${fe:url('/css/codesearch/bootstrap.min.css')}" rel="stylesheet" type="text/css" />
 <link href="${fe:url('/css/codesearch/font-awesome.min.css')}" rel="stylesheet" type="text/css" />
 <link href="${fe:url('/css/codesearch/style.css')}" rel="stylesheet" type="text/css" />
@@ -34,7 +34,7 @@
 				<div class="card login-card">
 					<div class="card-body p-4">
 						<h5 class="card-title text-center mb-3">
-							<la:message key="labels.profile" />
+							<la:message key="labels.login.newpassword" />
 						</h5>
 						<div>
 							<la:info id="msg" message="false">
@@ -42,24 +42,14 @@
 							</la:info>
 							<la:errors />
 						</div>
-						<la:form styleId="login" method="post">
-							<div class="mb-3">
-								<div class="input-group">
-									<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
-									<c:set var="ph_old_password">
-										<la:message key="labels.profile.placeholder_old_password" />
-									</c:set>
-									<la:password property="oldPassword" class="form-control"
-										placeholder="${ph_old_password}" />
-								</div>
-							</div>
+						<la:form styleId="newPassword" method="post">
 							<div class="mb-3">
 								<div class="input-group">
 									<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 									<c:set var="ph_new_password">
-										<la:message key="labels.profile.placeholder_new_password" />
+										<la:message key="labels.login.placeholder_new_password" />
 									</c:set>
-									<la:password property="newPassword" class="form-control"
+									<la:password property="password" class="form-control"
 										placeholder="${ph_new_password}" />
 								</div>
 							</div>
@@ -67,23 +57,18 @@
 								<div class="input-group">
 									<span class="input-group-text"><i class="fa fa-lock fa-fw" aria-hidden="true"></i></span>
 									<c:set var="ph_confirm_password">
-										<la:message key="labels.profile.placeholder_confirm_new_password" />
+										<la:message key="labels.login.placeholder_confirm_new_password" />
 									</c:set>
-									<la:password property="confirmNewPassword" class="form-control"
+									<la:password property="confirmPassword" class="form-control"
 										placeholder="${ph_confirm_password}" />
 								</div>
 							</div>
 							<div class="text-center">
-								<la:link href="/"
-									styleClass="btn btn-secondary">
-									<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-									<la:message key="labels.profile.back" />
-								</la:link>
 								<button type="submit" name="changePassword"
-									class="btn btn-primary"
-									value="<la:message key="labels.profile.update"/>">
+									class="btn btn-primary w-100"
+									value="<la:message key="labels.login.update"/>">
 									<i class="fa fa-pencil-alt" aria-hidden="true"></i>
-									<la:message key="labels.profile.update" />
+									<la:message key="labels.login.update" />
 								</button>
 							</div>
 						</la:form>
@@ -98,6 +83,6 @@
 		src="${fe:url('/js/codesearch/jquery-3.7.1.min.js')}"></script>
 	<script type="text/javascript" src="${fe:url('/js/codesearch/popper.min.js')}"></script>
 	<script type="text/javascript" src="${fe:url('/js/codesearch/bootstrap.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/codesearch/profile.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/login.js')}"></script>
 </body>
 </html>

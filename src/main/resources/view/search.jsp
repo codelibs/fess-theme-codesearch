@@ -12,10 +12,10 @@
 		href="${fe:url('/osdd')}"
 		title="<la:message key="labels.index_osdd_title" />" />
 </c:if>
-<link href="${fe:url('/css/bootstrap.min.css')}" rel="stylesheet"
+<link href="${fe:url('/css/codesearch/bootstrap.min.css')}" rel="stylesheet"
 	type="text/css" />
 <link href="${fe:url('/css/codesearch/style.css')}" rel="stylesheet" type="text/css" />
-<link href="${fe:url('/css/font-awesome.min.css')}" rel="stylesheet"
+<link href="${fe:url('/css/codesearch/font-awesome.min.css')}" rel="stylesheet"
 	type="text/css" />
 <%@ include file="adsenseHead.jsp" %>
 </head>
@@ -26,7 +26,7 @@
 		<ul class="list-inline">
 			<li class="list-inline-item"><la:message key="labels.searchoptions_menu_sort" /> <a
 				href="#searchOptions" class="badge text-bg-primary"
-				data-bs-toggle="collapse"> <c:if test="${empty sort}">
+				data-toggle="control-options"> <c:if test="${empty sort}">
 						<la:message key="labels.searchoptions_score" />
 					</c:if> <c:if test="${sort=='score.desc'}">
 						<la:message key="labels.searchoptions_score" />
@@ -60,12 +60,12 @@
 			</a></li>
 			<li class="list-inline-item"><la:message key="labels.searchoptions_menu_num" /> <a
 				href="#searchOptions" class="badge text-bg-primary"
-				data-bs-toggle="collapse"> <la:message
+				data-toggle="control-options"> <la:message
 						key="labels.searchoptions_num" arg0="${f:h(num)}" />
 			</a></li>
 			<li class="list-inline-item"><la:message key="labels.searchoptions_menu_lang" /> <a
 				href="#searchOptions" class="badge text-bg-primary"
-				data-bs-toggle="collapse"> <c:if test="${empty lang}">
+				data-toggle="control-options"> <c:if test="${empty lang}">
 						<la:message key="labels.searchoptions_all" />
 					</c:if> <c:if test="${!empty lang}">
 						<c:forEach var="sLang" items="${lang}">
@@ -151,11 +151,12 @@
 	<jsp:include page="footer.jsp" />
 	<input type="hidden" id="contextPath" value="${contextPath}" />
 	<script type="text/javascript"
-		src="${fe:url('/js/jquery-3.6.3.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/clipboard.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/bootstrap.min.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/suggestor.js')}"></script>
-	<script type="text/javascript" src="${fe:url('/js/search.js')}"></script>
+		src="${fe:url('/js/codesearch/jquery-3.7.1.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/clipboard.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/popper.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/bootstrap.min.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/suggestor.js')}"></script>
+	<script type="text/javascript" src="${fe:url('/js/codesearch/search.js')}"></script>
 	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
