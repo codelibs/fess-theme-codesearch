@@ -4,12 +4,12 @@
 	<artifactId>fess-theme-codesearch</artifactId>
 	<packaging>jar</packaging>
 	<name>CodeLibs Simple Theme</name>
-	<version>15.5.0</version>
+	<version>15.5.1-SNAPSHOT</version>
 	<scm>
 		<connection>scm:git:git@github.com:codelibs/fess-theme-codesearch.git</connection>
 		<url>scm:git:git@github.com:codelibs/fess-theme-codesearch.git</url>
 		<developerConnection>scm:git:git@github.com:codelibs/fess-theme-codesearch.git</developerConnection>
-	  <tag>fess-theme-codesearch-15.5.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<parent>
 		<groupId>org.codelibs.fess</groupId>
